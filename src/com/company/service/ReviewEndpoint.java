@@ -15,7 +15,13 @@ import java.util.List;
 @Path("review")
 public class ReviewEndpoint {
 
-    //Get reviews regarding specific bar
+    //Get reviews r
+    @GET
+    public List<Review> getAll() {
+        Reviews review = new Reviews();
+        return review.getReviews();
+    }
+
     @GET
     @Path("/{id}")
     public List<Review> getReviews(@PathParam("id") int id) {

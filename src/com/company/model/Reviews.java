@@ -11,9 +11,14 @@ import java.util.List;
 public class Reviews {
     List<Review> reviews = new ArrayList<Review>();
     public Reviews() {
+        int reviewId = 0;
         for (int i = 0; i < 10; i++) {
-            Review newReview = new Review(i, i, "I mean bar " + i + " is alright", 4.0);
+            Review newReview = new Review(reviewId, i, "I mean bar " + i + " is alright", 4.0);
+            reviewId++;
+            Review secondReview = new Review(reviewId, i, "I mean bar " + i + " is alright", 4.0);
+            reviewId++;
             reviews.add(newReview);
+            reviews.add(secondReview);
         }
     }
 }
